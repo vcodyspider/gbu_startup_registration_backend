@@ -10,7 +10,16 @@ const app = express();
 /* ================================
    MIDDLEWARE
 ================================ */
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://gbustartupregistration-frontend.vercel.app/"
+    ],
+  })
+);
+
+
 app.use(express.json());
 
 /* ================================
